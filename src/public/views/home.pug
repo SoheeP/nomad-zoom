@@ -1,0 +1,34 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Noom
+    link(rel="stylesheet" href="https://unpkg.com/mvp.css")
+    link(rel="stylesheet" href="/public/css/style.css")
+  body
+    header
+      h1 Noom
+    main
+      div#welcome
+        form
+          input(type="text", placeholder="room name", required)
+          button Enter room
+      div#call
+        .button-wrap
+            button#exit Close
+            button#mute Mute
+            button#camera Turn Camera Off
+        .flex.gap-24.align-flex-end
+          div#myStream
+            select#cameras
+            video#myFace(autoplay, playsinline, width='400', height='300')
+          video#peerFace(autoplay, playsinline, width='400', height='300')
+        #chat
+          h4 ChatMessage
+          div#messages
+          form
+            input(type="text", placeholder="message", required)
+            button Send
+    script(src="/socket.io/socket.io.js")
+    script(src="/public/js/app.js")

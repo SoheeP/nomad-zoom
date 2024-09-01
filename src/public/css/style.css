@@ -1,0 +1,68 @@
+.flex {
+  display: flex;
+}
+.gap-24 {
+  gap: 24px;
+}
+.align-flex-end {
+  align-items: flex-end;
+}
+#welcome, .exit {
+  flex: 1;
+}
+#myStream {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.button-wrap {
+  display: flex;
+  gap: 8px;
+}
+
+video {
+  border-radius: 16px;
+  background-color: #000;
+}
+
+.send {
+  margin-left: auto;
+  border-radius: 8px;
+  padding: 2px 8px;
+  background-color: #1885f9;
+  box-sizing: border-box;
+  color: white;
+}
+
+#messages {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  flex-direction: column;
+  display: flex;
+  gap: 4px;
+}
+.received {
+  margin-right: auto;
+  border-radius: 8px;
+  padding: 2px 8px;
+  border: 1px solid #1885f9;
+  box-sizing: border-box;
+  color: #1885f9;
+}
+
+@media screen and (max-width: 768px) {
+  .flex {
+    flex-direction: column;
+  }
+  #welcome, .exit {
+    margin-bottom: 8px;
+  }
+  #myStream {
+    gap: 8px;
+  }
+  .button-wrap {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+}
